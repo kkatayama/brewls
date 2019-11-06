@@ -11,7 +11,7 @@ $> brewls [keyword]
 ```
 
 ## Example
-```ObjectScript
+```Mask
 $> brewls pdf                                                                                                                 6:13PM
 ==> Formulae
 diff-pdf: Visually compare two PDF files
