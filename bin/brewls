@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+import sys
+import subprocess
+
+
+def red(prt):
+    return "\033[91m{}\033[00m".format(prt)
+
+
+def grn(prt):
+    return "\033[92m{}\033[00m".format(prt)
+
+
+def cyn(prt):
+    return "\033[96m{}\033[00m".format(prt)
+
+def search(package):
+    check = 0
+    p = subprocess.Popen(['brew', 'search', '--desc', '""'], stdout=subprocess.PIPE, universal_newlines=False)
+    while 1:
+        response = p.stdout.readline().decode('utf-8').strip()
+        if package in response:
+            print(cyn(response.split(':')[0]) + red(':') + grn(response.split(':')[1]))
+        elif '==> Formulae' in response or '==> Casks' in response:
+             print(response)
+        elif check == 1 and response == '':
+            break
+        elif response =='':
+            check = 1
+    
+
+if __name__ == '__main__':
+    if len(sys.argv) == 2:
+        search(sys.argv[1])
+    else:
+        search(':')
