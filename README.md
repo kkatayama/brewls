@@ -12,7 +12,7 @@ $> brewls [keyword]
 
 ## Example
 ```Mask
-$> brewls pdf                                                                                                                 6:13PM
+$) brewls pdf                                                                                                                 6:13PM
 ==> Formulae
 diff-pdf: Visually compare two PDF files
 djvu2pdf: Small tool to convert Djvu files to PDF files
