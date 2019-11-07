@@ -11,7 +11,7 @@ $> brewls [keyword]
 ```
 
 ## Example
-```YAML
+```Agda
 $ brewls pdf
 ==> Formulae
 diff-pdf: Visually compare two PDF files
