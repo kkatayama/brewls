@@ -9,13 +9,14 @@ $ pip install -e .
 
 ## Usage
 ```YAML
-$ brewls [keyword]
+$ brewls              # list all packages
+$ brewls [keyword]    # list packages filtered by keyword
 ```
+> A blank `[keyword]` returns all available packages
 
 ## Example
 ```YAML
 $ brewls pdf
-
 ==> Formulae
 diff-pdf: Visually compare two PDF files
 djvu2pdf: Small tool to convert Djvu files to PDF files
@@ -41,7 +42,6 @@ poppler: PDF rendering library (based on the xpdf-3.0 code base)
 qpdf: Tools for and transforming and inspecting PDF files
 svg2pdf: Renders SVG images to a PDF file (using Cairo)
 xpdf: PDF viewer
-
 ==> Casks
 wkhtmltopdf: wkhtmltopdf
 master-pdf-editor: Master PDF Editor
