@@ -10,7 +10,7 @@ $ pip install -e .
 ## Usage
 ```YAML
 $ brewls              # list all packages
-$ brewls [keyword]    # list packages filtered by keyword
+$ brewls [keyword]    # list packages filtered by keyword (in name or description)
 ```
 
 ## Example
