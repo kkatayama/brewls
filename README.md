@@ -1,8 +1,10 @@
 # A Better HomeBrew Package Search
 
 ## Install
-```python
-python setup.py install
+```YAML
+$ git clone https://github.com/kkatayama/brewls.git
+$ cd brewls
+$ pip install -e .
 ```
 
 ## Usage
