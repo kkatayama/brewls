@@ -11,8 +11,8 @@ $> brewls [keyword]
 ```
 
 ## Example
-```Cirru
-$# brewls pdf
+```LookML
+$> brewls pdf
 ==> Formulae
 diff-pdf: Visually compare two PDF files
 djvu2pdf: Small tool to convert Djvu files to PDF files
