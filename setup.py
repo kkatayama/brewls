@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='brewls',
-      version='0.3',
+      version='0.4',
       description='A better homebrew package search',
       url='http://github.com/kkatayama',
       author='Teddy',
