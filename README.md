@@ -12,7 +12,6 @@ $ pip install -e .
 $ brewls              # list all packages
 $ brewls [keyword]    # list packages filtered by keyword
 ```
-> A blank `[keyword]` returns all available packages
 
 ## Example
 ```YAML
