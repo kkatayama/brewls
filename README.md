@@ -6,12 +6,12 @@ python setup.py install
 ```
 
 ## Usage
-```Agda
+```YAML
 $ brewls [keyword]
 ```
 
 ## Example
-```Agda
+```YAML
 $ brewls pdf
 ==> Formulae
 diff-pdf: Visually compare two PDF files
