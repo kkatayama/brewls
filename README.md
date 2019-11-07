@@ -6,8 +6,8 @@ python setup.py install
 ```
 
 ## Usage
-```ObjectScript
-$> brewls [keyword]
+```Agda
+$ brewls [keyword]
 ```
 
 ## Example
