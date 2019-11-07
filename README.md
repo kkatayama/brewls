@@ -1,4 +1,4 @@
-# My Custom Python Functions
+# A Better HomeBrew Package Search
 
 ## Install
 ```python
