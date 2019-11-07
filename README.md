@@ -11,7 +11,7 @@ $> brewls [keyword]
 ```
 
 ## Example
-```ABNF
+```Cirru
 $> brewls pdf
 ==> Formulae
 diff-pdf: Visually compare two PDF files
