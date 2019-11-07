@@ -18,8 +18,8 @@ def search(package):
     check = 0
     p = subprocess.Popen(['brew', 'search', '--desc', '""'], stdout=subprocess.PIPE, universal_newlines=False)
     while 1:
-        response = p.stdout.readline().decode('utf-8').strip().lower()
-        if package in response:
+        response = p.stdout.readline().decode('utf-8').strip()
+        if package in response.lower():
             print(cyn(response.split(':')[0]) + red(':') + grn(response.split(':')[1]))
         elif '==> Formulae' in response or '==> Casks' in response:
              print(response)

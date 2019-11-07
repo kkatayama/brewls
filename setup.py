@@ -1,7 +1,14 @@
+"""
+A Better HomeBrew Package Search
+
+Usage: brewls [keyword]
+
+"""
+
 from setuptools import setup
 
 setup(name='brewls',
-      version='0.4',
+      version='0.5',
       description='A better homebrew package search',
       url='http://github.com/kkatayama',
       author='Teddy',
