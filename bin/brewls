@@ -22,7 +22,7 @@ def search(package):
         if package in response:
             print(cyn(response.split(':')[0]) + red(':') + grn(response.split(':')[1]))
         elif '==> Formulae' in response or '==> Casks' in response:
-             print(response)
+             print('\n' + response)
         elif check == 1 and response == '':
             break
         elif response =='':
