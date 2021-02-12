@@ -16,7 +16,7 @@ def search(package):
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
-    ap.add_argument('query', required=False, default=':', help='(optional) search term for brew packages')
+    ap.add_argument('query', default=':', help='(optional) search term for brew packages')
     args = ap.parse_args()
 
     search(args.query)
