@@ -8,7 +8,7 @@ Usage: brewls [keyword]
 from setuptools import setup
 
 setup(name='brewls',
-      version='0.8',
+      version='0.9',
       description='A better homebrew package search',
       url='http://github.com/kkatayama/brewls',
       author='Teddy',
