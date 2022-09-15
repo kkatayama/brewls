@@ -11,7 +11,7 @@ with open('requirements.txt') as f:
     required = f.read().splitlines()
 
 setup(name='brewls',
-      version='1.0.1',
+      version='1.0.2',
       description='A better homebrew package search',
       url='http://github.com/kkatayama/brewls',
       author='Teddy',
