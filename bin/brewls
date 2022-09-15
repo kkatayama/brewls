@@ -1,6 +1,45 @@
 #!/usr/bin/env python3
 from rich import print
 import argparse
+import requests
+import re
+
+
+def search(query, data):
+    r = re.compile(rf'({query})', re.IGNORECASE)
+    for d in data:
+        name = d["token"] if d.get("token") else d["name"]
+        desc = d["desc"] if d.get("desc") else d["name"][0]
+        if r.search(" ".join([name, desc])):
+            print(f'[cyan]{name}[/][red]:[/][green]{desc}[/]')
+
+
+def main(query):
+    packages = [
+        {'type': '==> Formulae', 'url': 'https://formulae.brew.sh/api/formula.json'},
+        {'type': '==> Casks', 'url': 'https://formulae.brew.sh/api/cask.json'},
+    ]
+    for pkg in packages:
+        print(pkg["type"])
+        with requests.get(pkg["url"], stream=True) as response:
+            search(query, response.json())
+
+
+if __name__ == '__main__':
+    ap = argparse.ArgumentParser()
+    ap.add_argument('query', nargs='?', default='', help='(optional) search term for brew packages')
+    args = ap.parse_args()
+    main(args.query)
+
+
+
+
+
+
+
+"""
+from rich import print
+import argparse
 import subprocess
 
 def search(package):
@@ -20,3 +59,4 @@ if __name__ == '__main__':
     args = ap.parse_args()
 
     search(args.query)
+"""

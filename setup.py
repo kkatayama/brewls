@@ -7,8 +7,11 @@ Usage: brewls [keyword]
 
 from setuptools import setup
 
+with open('requirements.txt') as f:
+    required = f.read().splitlines()
+
 setup(name='brewls',
-      version='0.9',
+      version='1.0.0',
       description='A better homebrew package search',
       url='http://github.com/kkatayama/brewls',
       author='Teddy',
@@ -17,4 +20,5 @@ setup(name='brewls',
       packages=['brewls'],
       python_requires='>=3',
       scripts=['bin/brewls'],
+      install_requires=required,
       zip_safe=False)
