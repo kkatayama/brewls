@@ -11,7 +11,7 @@ def search(query, data):
         name = d["token"] if d.get("token") else d["name"]
         desc = d["desc"] if d.get("desc") else d["name"][0]
         if r.search(" ".join([name, desc])):
-            print(f'[cyan]{name}[/][red]:[/][green]{desc}[/]')
+            print(f'[cyan]{name:>26}[/][red]:[/] [green]{desc}[/]')
 
 
 def main(query):
