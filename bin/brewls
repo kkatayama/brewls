@@ -20,7 +20,7 @@ def main(query):
         {'type': '==> Casks', 'url': 'https://formulae.brew.sh/api/cask.json'},
     ]
     for pkg in packages:
-        print(pkg["type"])
+        print(f'\n{pkg["type"]}')
         with requests.get(pkg["url"], stream=True) as response:
             search(query, response.json())
 
