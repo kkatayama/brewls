@@ -6,7 +6,8 @@ import re
 
 
 def search(query, data):
-    r = re.compile(rf'({query})', re.IGNORECASE)
+    terms = '|'.join(query.split())
+    r = re.compile(rf'({terms})', re.IGNORECASE)
     for d in data:
         name = d["token"] if d.get("token") else d["name"]
         desc = d["desc"] if d.get("desc") else d["name"][0]
@@ -27,7 +28,7 @@ def main(query):
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
-    ap.add_argument('query', nargs='?', default='', help='(optional) search term for brew packages')
+    ap.add_argument('query', nargs='?', default='', help='[optional] search term(s) for brew packages')
     args = ap.parse_args()
     main(args.query)
 
